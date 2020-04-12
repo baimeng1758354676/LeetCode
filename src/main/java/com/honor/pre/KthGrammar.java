@@ -6,7 +6,7 @@ package com.honor.pre;
  */
 public class KthGrammar {
     public static void main(String[] args) {
-        System.out.println("dev");
+        System.out.println("devstage");
     }
 
     public static int getNumber(int n, int k) {
