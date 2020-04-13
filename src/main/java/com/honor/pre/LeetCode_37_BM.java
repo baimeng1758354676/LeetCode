@@ -42,6 +42,7 @@ public class LeetCode_37_BM {
     static int[][] columns = new int[9][10];
     static int[][] boxes = new int[9][10];
     public static void main(String[] args) {
+        System.out.println("uat");
         char[][] board = new char[][]{
                 {'5','3','.','.','7','.','.','.','.'},
                 {'6','.','.','1','9','5','.','.','.'},
