@@ -23,6 +23,40 @@ package com.honor.xiaohaoalgorithm;
 public class LongestPrefix {
     public static void main(String[] args) {
 
+//        String[] strings = new String[]{"flower", "flow", "flight"};
+        String[] strings = new String[]{"dog", "racecar", "car"};
+
+
+        LongestPrefix longestPrefix = new LongestPrefix();
+        String s = longestPrefix.longestPrefix(strings);
+        System.out.println(s);
+
+    }
+
+    public String longestPrefix(String[] strings) {
+        String standard = strings[0];
+
+        for (int i = 1; i < strings.length; i++) {
+
+            standard = getPrefixOfTwo(standard, strings[i]);
+        }
+        return standard;
+    }
+
+    private String getPrefixOfTwo(String standard, String string) {
+
+        int index1 = 0, index2 = 0;
+        while (index1 < standard.length() && index2 < string.length()) {
+            if (standard.charAt(index1) == string.charAt(index2)) {
+                index1++;
+                index2++;
+            } else {
+                break;
+
+            }
+
+        }
+        return standard.substring(0, index1);
     }
 
 }
