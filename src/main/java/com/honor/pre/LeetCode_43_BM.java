@@ -1,6 +1,7 @@
 package com.honor.pre;
 
-import cn.hutool.core.util.StrUtil;
+
+import org.apache.commons.lang.StringUtils;
 
 /**
  * 给定两个以字符串形式表示的非负整数 num1 和 num2，返回 num1 和 num2 的乘积，它们的乘积也表示为字符串形式。
@@ -66,9 +67,9 @@ public class LeetCode_43_BM {
     }
 
     private static String strPlus(String builder, String result) {
-        if (StrUtil.isBlank(result)) {
+        if (StringUtils.isBlank(result)) {
             return builder;
-        } else if (StrUtil.isBlank(builder)) {
+        } else if (StringUtils.isBlank(builder)) {
             return result;
         }
         int builderIndex = builder.length() - 1;
